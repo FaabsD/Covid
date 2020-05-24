@@ -1,0 +1,15 @@
+// kleuren variables
+$head-color: #8CF68F;
+
+body{
+    margin: 0;
+
+}
+nav{
+    padding: .1em;
+    background-color: $head-color;
+    h1{
+        text-align: center;
+        font-size: 28px;
+    }
+}
