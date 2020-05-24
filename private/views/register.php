@@ -1,4 +1,4 @@
-<?php $this->layout('website');?>
+<?php $this->layout('registreer-inlog');?>
 <?php $this->start('page_title')?>
     Registreren
 <?php $this->stop()?>
