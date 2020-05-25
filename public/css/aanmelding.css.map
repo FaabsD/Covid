@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/aanmelding.scss"],"names":[],"mappings":"AAGA;EACI;;;AAGJ;EACI;EACA,kBARS;;AAST;EACI;EACA;;;AAGR;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;;AACA;EACI;;AACA;AAAA;AAAA;EAGI;EACA;EACA;EACA;EACA","file":"aanmelding.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/aanmelding.scss"],"names":[],"mappings":"AAGA;EACI;;;AAGJ;EACI;EACA,kBARS;;AAST;EACI;EACA;;;AAGR;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;;AACA;EACI;;AACA;AAAA;AAAA;EAGI;EACA;EACA;EACA;EACA;EACC;EACA","file":"aanmelding.css"}
