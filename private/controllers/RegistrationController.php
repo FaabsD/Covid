@@ -24,6 +24,8 @@
         // check op echt e-mailadres
         $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
         $password = trim($_POST['password']);
+        $fullname = $_POST['fullname'];
+        $username = $_POST['username'];
 
         if ( $email === false ){
             $errors['email'] = "Geen geldig e-mailadres ingevuld";
@@ -43,12 +45,28 @@
 
             if ( $statement->rowCount() === 0 ){
                 //geen gebruiker gevonden? Verder met opslaan
-                $sql = "INSERT INTO users"
+                $sql = "INSERT INTO users (email, full_name, user_name, password) 
+                VALUES (:email, :fullname, :username, :password)";
+                $statement = $connection->prepare( $sql );
+                $safe_password = password_hash( $password, PASSWORD_DEFAULT );
+                $params = [
+                    'email' => $email,
+                    'fullname' => $fullname,
+                    'username' => $username,
+                    'password' => $safe_password
+                ];
+                $statement->execute( $params );
+                echo "Klaar";
+                exit;
             } else{
                 //anders aangeven dat het e-mail al wordt gebruikt
-                $errors['email'] = "Dit e-mailadres is al in gebruik"
+                $errors['email'] = "Dit e-mailadres is al in gebruik";
             }
         }
     }
     }
+    /*
+    TODO Ervoor zorgen dat foutmeldingen worden getoont:
+    http://bap.mediadeveloper.amsterdam/covid-19/gebruikers-registratie/05-foutmeldingen-invoer-tonen/
+    */
 ?>
