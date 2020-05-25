@@ -11,4 +11,29 @@ nav h1 {
   font-size: 28px;
 }
 
+header {
+  font-size: 25px;
+  text-align: center;
+  color: #1A8C17;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+main form {
+  text-align: center;
+}
+main form input[type=email],
+main form input[type=text],
+main form input[type=password] {
+  margin-top: 19px;
+  margin-bottom: 19px;
+  height: 42px;
+  text-align: center;
+  width: 70vw;
+}
+
 /*# sourceMappingURL=aanmelding.css.map */
