@@ -16,7 +16,13 @@ header {
   padding-bottom: 1.5em;
   text-align: center;
 }
+header .error {
+  text-decoration: underline;
+  font-size: 16px;
+  color: red;
+}
 header h2 {
+  padding: 1em;
   font-size: 25px;
   color: #1A8C17;
   margin: 0;
