@@ -68,7 +68,7 @@
     }
     }
     /*
-    TODO Ervoor zorgen dat foutmeldingen worden getoont:
-    http://bap.mediadeveloper.amsterdam/covid-19/gebruikers-registratie/05-foutmeldingen-invoer-tonen/
+    TODO Ervoor zorgen dat je wordt doorverwezen naar een bedanktpagina:
+    http://bap.mediadeveloper.amsterdam/covid-19/gebruikers-registratie/06-redirect-bedankt-pagina/
     */
 ?>
