@@ -63,6 +63,8 @@
                 $errors['email'] = "Dit e-mailadres is al in gebruik";
             }
         }
+        $template_engine = get_template_engine();
+        echo $template_engine->render('register', ['errors' => $errors]);
     }
     }
     /*
