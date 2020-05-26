@@ -4,10 +4,10 @@
 <?php $this->stop()?>
 <?php $this->start('header_content')?>
     <?php if ( isset ( $errors['email'] )): ?>
-            <small><?php echo $errors['email']?></small>
+            <span class="error"><?php echo $errors['email']?></span>
     <?php endif ?>
     <?php if ( isset ( $errors['password'] )): ?>
-            <small><?php echo $errors['password']?></small>
+            <span class="error"><?php echo $errors['password']?></span>
     <?php endif ?>
     <h2>
         Registreren
