@@ -34,9 +34,37 @@ header {
     }
 }
 
+aside {
+    display: none;
+}
+
 main {
     margin-left: auto;
     margin-right: auto;
 
     @import 'form-velden';
+}
+
+@media screen and (min-width: $desktop-width) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav {
+        grid-column: 1/-1;
+    }
+
+    header {
+        grid-column: 2;
+
+        h2 {
+            font-size: 50px;
+        }
+    }
+
+    aside {
+        grid-column: 1;
+        display: unset;
+    }
 }
