@@ -1,3 +1,6 @@
+// Hier staat alle stijl voor het registratie formulier. ps. Is evt ook te gebruiken voor het inlog formuliers 
+@import 'vars';
+
 form {
     text-align: center;
 
@@ -24,6 +27,23 @@ form {
         border-radius: 25px;
         font-size: 20px;
         font-weight: 700;
+        color: $head-text-color;
         background-color: $head-color;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    form {
+
+        input[type="email"],
+        input[type="text"],
+        input[type="password"] {
+            width: 50%;
+        }
+
+        input[type="submit"] {
+            width: 50%;
+            height: 71px;
+        }
     }
 }
