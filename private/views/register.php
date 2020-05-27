@@ -13,6 +13,9 @@
         Registreren
     </h2>
 <?php $this->stop()?>
+<?php $this->start('aside_content')?>
+    <img src="<?php echo site_url('/images/Icon awesome-city.png')?>" alt="">
+<?php $this->stop()?>
 <?php $this->start('main_content')?>
     <form action="<?php echo url("register.handle")?>" method="post">
         <input type="email" name="email" value ="<?php echo input('email') ?>"placeholder="E-mail adres">
