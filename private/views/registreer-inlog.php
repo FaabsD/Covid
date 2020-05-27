@@ -13,6 +13,9 @@
     <header>
         <?php echo $this->section('header_content');?>
     </header>
+    <aside>
+        <?php echo $this->section('aside_content');?>
+    </aside>
     <main>
         <?php echo $this->section('main_content');?>
     </main>  
