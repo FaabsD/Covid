@@ -35,8 +35,6 @@ aside {
 }
 
 main {
-  margin-left: auto;
-  margin-right: auto;
   /* Stijl voor het formulier */
   /* Stijl voor het formulier in desktop weergave */
 }
@@ -91,6 +89,8 @@ main form input[type=password] {
   }
 
   header {
+    width: 100%;
+    padding-bottom: 0;
     grid-column: 2;
   }
   header h2 {
