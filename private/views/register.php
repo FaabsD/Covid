@@ -14,7 +14,7 @@
     </h2>
 <?php $this->stop()?>
 <?php $this->start('aside_content')?>
-    <img src="<?php echo site_url('/images/Icon awesome-city.png')?>" alt="">
+    <img src="<?php echo site_url('/images/Icon awesome-city.png')?>" alt="Stad illustratie">
 <?php $this->stop()?>
 <?php $this->start('main_content')?>
     <form action="<?php echo url("register.handle")?>" method="post">
