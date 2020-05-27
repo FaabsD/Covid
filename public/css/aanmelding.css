@@ -37,6 +37,8 @@ aside {
 main {
   margin-left: auto;
   margin-right: auto;
+  /* Stijl voor het formulier */
+  /* Stijl voor het formulier in desktop weergave */
 }
 main form {
   text-align: center;
