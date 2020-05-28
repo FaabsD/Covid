@@ -50,7 +50,7 @@ use function DI\create;
     }
     }
     /*
-    TODO Ervoor zorgen dat je wordt doorverwezen naar een bedanktpagina:
-    http://bap.mediadeveloper.amsterdam/covid-19/gebruikers-registratie/06-redirect-bedankt-pagina/
+    TODO Verder met bevesitigingsmail sturen functions aanmaken en test:
+    http://bap.mediadeveloper.amsterdam/covid-19/features/bevestigings-e-mail-sturen/
     */
 ?>
