@@ -43,6 +43,10 @@ function site_url( $path = '' ) {
 	return get_config( 'BASE_URL' ) . $path;
 }
 
+function absolute_url( $path = '' ){
+	return get_config( 'BASE_HOST' ) . $path;
+}
+
 function get_config( $name ) {
 	$config = require __DIR__ . '/config.php';
 	$name = strtoupper( $name );
@@ -177,4 +181,34 @@ function embedImage( $message, $filename ) {
 	$cid = $message->embed( \Swift_Image::fromPath( $image_path ) );
 
 	return $cid;
+}
+
+function sendConfirmationMail($email, $code){
+
+	$url = url('register.confirm', ['code' => $code]);
+	$absolute_url = absolute_url($url);
+
+	$mailer = getSwiftMailer();
+	$message = createEmailMessage($email, 'Bevestig je account', 'DrukteZoeker', '19959@ma-web.nl');
+	$email_text = 'Welkom bij DrukteZoeker. Gebruik de volgende link om je account te bevestigen: '. '<a href ="'. $absolute_url. '">Klik hier om je account te bevestigen</a>';
+
+	$message->setBody($email_text, 'text/html');
+
+	$mailer->send($message);
+
+
+}
+
+
+/**
+ * confirm an account by confirmation code
+ */
+function confirmAccount($code){
+	$connection = dbConnect();
+	$sql = "UPDATE `users` SET `code` = NULL WHERE `code` = :code";
+	$statement = $connection->prepare( $sql );
+	$params = [
+		'code' => $code
+	];
+	$statement->execute($params);
 }
