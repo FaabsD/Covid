@@ -35,6 +35,10 @@ use function DI\create;
                 $code = md5(uniqid(rand(), true));
 
                createUser($result['data']['email'], $result['data']['password'], $result['data']['fullname'], $result['data']['username'], $code);
+               
+                //Bevesigingsmail versturen met verificatie link +code
+                SendConfirmationMail($result['data']['email'], $code);
+
                 // Doorsturen naar bedankpagina
                 $bedanktUrl = url('register.bedankpagina');
                 redirect($bedanktUrl);
@@ -55,10 +59,15 @@ use function DI\create;
 
     public function confirmRegistration($code){
         // hier wordt de code gelezen
-        echo $code;
-        //gebruiker ophalen bij deze code
 
+        //gebruiker ophalen bij deze code
+        $user = getUserByCode($code);
+        if ( !$user ){
+            echo "Onbekende gebruiker of al bevestigd";
+            exit;
+        }
         //Gebruiker activeren: code leegmaken in database
+        confirmAccount($code);
     }
 
     }
