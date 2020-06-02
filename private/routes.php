@@ -12,9 +12,13 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	// Lees de docs, daar zie je hoe je routes kunt maken: https://github.com/skipperbent/simple-php-router#routes
 
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
+	//registratie controllers
 	SimpleRouter::get( '/registreren', 'RegistrationController@registrationPage' )->name( 'register' );
 	SimpleRouter::post( '/registreren/verwerken', 'RegistrationController@handleRegistration' )->name( 'register.handle' );
 	SimpleRouter::get( '/registreren/bedankt', 'RegistrationController@registrationThanks' )->name( 'register.bedankpagina' );
+	SimpleRouter::get('/registreren/bevestig-account/{code}', 'RegistrationController@confirmRegistration')->name( 'register.confirm' );
+	
+	SimpleRouter::get( '/stuur-test-email', 'EmailController@sendTestEmail' )->name('email.test');
 	// STOP: Tot hier al je eigen URL's zetten
 
 	SimpleRouter::get( '/not-found', function () {
