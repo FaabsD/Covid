@@ -63,7 +63,7 @@ use function DI\create;
 
     }
     /*
-    TODO Verder met bevesitigingsmail sturen functions aanmaken en test:
-    http://bap.mediadeveloper.amsterdam/covid-19/features/bevestigings-e-mail-sturen/
+    TODO Verder met Bevestigingscode afhandelen en gebruiker activeren:
+    http://bap.mediadeveloper.amsterdam/covid-19/bevestigings-e-mail-sturen/07-bevestigingscode-afhandelen-gebruiker-activeren/
     */
 ?>
