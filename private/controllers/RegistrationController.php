@@ -30,7 +30,11 @@ use function DI\create;
             //Sla gebruiker op
 
             if ( userNotRegistered($result['data']['email']) ){
-               createUser($result['data']['email'], $result['data']['password'], $result['data']['fullname'], $result['data']['username']);
+                
+                // verificatie code
+                $code = md5(uniqid(rand(), true));
+
+               createUser($result['data']['email'], $result['data']['password'], $result['data']['fullname'], $result['data']['username'], $code);
                 // Doorsturen naar bedankpagina
                 $bedanktUrl = url('register.bedankpagina');
                 redirect($bedanktUrl);
@@ -48,6 +52,15 @@ use function DI\create;
         $template_engine = get_template_engine();
         echo $template_engine->render('bedankpagina');
     }
+
+    public function confirmRegistration($code){
+        // hier wordt de code gelezen
+        echo $code;
+        //gebruiker ophalen bij deze code
+
+        //Gebruiker activeren: code leegmaken in database
+    }
+
     }
     /*
     TODO Verder met bevesitigingsmail sturen functions aanmaken en test:
