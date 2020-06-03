@@ -15,11 +15,16 @@
     <header>
         <h2>Jouw account is nu bevestigd</h2>
     </header>
-    <aside>
-        <?php echo $this->section('aside_content'); ?>
-    </aside>
     <main>
-        <?php echo $this->section('main_content'); ?>
+        <p>
+            Je kunt nu gebruik maken van je account, veel plezier met het gebruik van DrukteZoeker
+        </p>
+        <p>
+            <a href="<?php echo url('')?>">Inloggen</a>
+        </p>
+        <p>
+            <a href="<?php echo url('home')?>">Naar startpagina</a>
+        </p>
     </main>
 </body>
 
