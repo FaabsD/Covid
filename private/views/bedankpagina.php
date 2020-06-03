@@ -6,7 +6,7 @@ Bedankt
 <h2>Bedankt Voor je Registratie</h2>
 <?php $this->stop() ?>
 <?php $this->start('aside_content') ?>
-hchgcgfjgfgfcg
+<img src="<?php echo site_url("/images/calligraphy-thanks.jpg")?>" alt="">
 <?php $this->stop() ?>
 <?php $this->start('main_content') ?>
 Check je E-mail om je account te bevestigen<br>
