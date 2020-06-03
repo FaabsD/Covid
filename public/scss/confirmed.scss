@@ -1,0 +1,80 @@
+@import'vars';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+    font-family: $Open-Sans;
+    margin: 0;
+
+}
+
+nav {
+    padding: 2px;
+    background-color: $head-color;
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+    }
+}
+
+header {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    text-align: center;
+
+    .error {
+        text-decoration: underline;
+        font-size: 16px;
+        color: red;
+    }
+
+    h2 {
+        padding: 1em;
+        font-size: 25px;
+        color: $head-text-color;
+        margin: 0;
+    }
+}
+
+main {
+    text-align: center;
+    
+    a {
+        display: block;
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+        background-color: $head-color;
+        text-decoration: none;
+        color: $head-text-color;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px $text-shadow-white;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+
+    nav {
+        grid-column: 1/-1;
+    }
+
+    header {
+        width: 100%;
+        padding-bottom: 0;
+        grid-column: 2/2;
+
+        h2 {
+            font-size: 50px;
+        }
+    }
+
+    main {
+        text-align: center;
+
+        a {
+            max-width: 25%;
+        }
+    }
+}
