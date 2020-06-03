@@ -68,8 +68,16 @@ use function DI\create;
         }
         //Gebruiker activeren: code leegmaken in database
         confirmAccount($code);
+        //doorsturen naar account bevestigd
+        $confirmedURL = url('register.confirmed');
+        redirect($confirmedURL);
     }
-
+    //render de account bevestigd pagina
+    public function registrationConfirmed(){
+        echo "Jouw account is nu bevestigd";
+        $template_engine = get_template_engine();
+        echo $template_engine->render('account-bevestigd');
+    }
     }
     /*
     TODO Verder met Bevestigingscode afhandelen en gebruiker activeren:
