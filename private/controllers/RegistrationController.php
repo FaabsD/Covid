@@ -74,7 +74,6 @@ use function DI\create;
     }
     //render de account bevestigd pagina
     public function registrationConfirmed(){
-        echo "Jouw account is nu bevestigd";
         $template_engine = get_template_engine();
         echo $template_engine->render('account-bevestigd');
     }
