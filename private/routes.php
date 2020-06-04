@@ -21,6 +21,8 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	SimpleRouter::get('/registreren/account-bevestigd', 'RegistrationController@registrationConfirmed')->name('register.confirmed');
 	
 	SimpleRouter::get( '/stuur-test-email', 'EmailController@sendTestEmail' )->name('email.test');
+	//Zoeken
+	SimpleRouter::post('/zoekresultaten', 'SearchController@SearchResults')->name('zoekresultaten');
 	// STOP: Tot hier al je eigen URL's zetten
 
 	SimpleRouter::get( '/not-found', function () {
