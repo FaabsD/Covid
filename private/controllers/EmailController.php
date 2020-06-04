@@ -8,6 +8,7 @@ use function DI\create;
     * Class EmailController
     * 
      */
+    //verstuur een testemail
     class EmailController {
     	public function sendTestEmail(){
             $mailer = getSwiftMailer();

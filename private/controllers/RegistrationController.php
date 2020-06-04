@@ -56,7 +56,7 @@ use function DI\create;
         $template_engine = get_template_engine();
         echo $template_engine->render('bedankpagina');
     }
-
+    // bevestig de gebruiker 
     public function confirmRegistration($code){
         // hier wordt de code gelezen
 
@@ -77,7 +77,7 @@ use function DI\create;
         $template_engine = get_template_engine();
         echo $template_engine->render('account-bevestigd');
     }
-    }
+}
     /*
     TODO Verder met Bevestigingscode afhandelen en gebruiker activeren:
     http://bap.mediadeveloper.amsterdam/covid-19/bevestigings-e-mail-sturen/07-bevestigingscode-afhandelen-gebruiker-activeren/
