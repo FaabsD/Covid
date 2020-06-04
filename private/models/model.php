@@ -15,3 +15,16 @@ function getUserByCode($code){
     }
     return false;
 }
+
+function searchStore($search){
+     
+    $sql = "SELECT * FROM `winkels` WHERE `winkelnaam` LIKE :search";
+    $connection = dbConnect();
+    $statement = $connection ->prepare( $sql );
+    $params = [
+        'search' => '%' . $search . '%'
+    ];
+    $statement->execute($params);
+    
+    return $statement->fetchAll();
+}
