@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Gegenereerd op: 04 jun 2020 om 11:36
+-- Gegenereerd op: 04 jun 2020 om 12:50
 -- Serverversie: 8.0.13-4
 -- PHP-versie: 7.2.24-0ubuntu0.18.04.6
 
@@ -46,6 +46,19 @@ INSERT INTO `users` (`id`, `email`, `full_name`, `user_name`, `password`, `code`
 (4, 'your.email+faker87491@gmail.com', 'Thijs Hendriks', 'Nick25', '$2y$10$0HqY39aUQQ6LCGlTxHKpkOhiNj7RCaQIton.c7/D3U8Qao6TqWSei', NULL),
 (5, 'your.email+faker23963@gmail.com', 'Eva Jong', 'Sander_Janssen60', '$2y$10$IoXygL5dgo7kfI63curnluK9qDiiXxuy5eyGIRpmeyTxhu6wz8O..', NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `winkels`
+--
+
+CREATE TABLE `winkels` (
+  `id` int(11) NOT NULL,
+  `winkelnaam` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `drukte` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `eigenaar` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 --
 -- Indexen voor geëxporteerde tabellen
 --
@@ -58,6 +71,12 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indexen voor tabel `winkels`
+--
+ALTER TABLE `winkels`
+  ADD KEY `id` (`id`);
+
+--
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
@@ -66,6 +85,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT voor een tabel `winkels`
+--
+ALTER TABLE `winkels`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
