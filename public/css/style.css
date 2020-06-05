@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+body {
+    display: flex;
+}
+
 .sidebar {
     height: 100vh;
     max-width: 25vh;
@@ -25,24 +29,96 @@
     padding-right: 1vh;
 }
 
-li {
+nav li {
     padding-top: 3vh;
     list-style-type: none;
-    font-size: 19px;
+    font-size: 22px;
     color: #878787;
-    width: 200px;
+    width: 220px;
+    font-weight: 300;
 }
 
-li img {
+nav li img {
     padding-right: 1vh;
 }
 
 .content {
     display: flex;
-    margin: auto;
+    padding: 15px 20px;
+    border-radius: 100px;
 }
 
-li.active {
+.content-active {
+    display: flex;
     background-color: #712BFF;
+    padding: 15px 20px;
+    border-radius: 100px;
     color: white;
+}
+
+main {
+    padding-left: 3vw;
+}
+
+.header {
+    padding: 35px 0px;
+    display: flex;
+}
+
+form.search {
+    display: flex;
+    flex: 1;
+}
+
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 80%;
+    background-color: #F6F6F6;
+    border: none;
+    color: #878787;
+}
+
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    color: #878787;
+    background-color: #F6F6F6;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+    outline: none;
+}
+
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+    border: none;
+    outline: none;
+}
+
+.content {
+    display: flex;
+}
+
+section.left {
+    flex: 2;
+}
+
+section.right {
+    flex: 1;
+    margin-left: 5vw;
+}
+
+.intro h1 {
+    font-size: 34px;
+    margin-bottom: 2vh;
 }
