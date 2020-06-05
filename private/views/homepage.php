@@ -43,9 +43,9 @@
     <main>
         <div class="header">
             <div class="searchbar">
-                <form class="search" action="/action_page.php" style="max-width:200px">
+                <form class="search" method ="post" action="<?php echo url('zoekresultaten')?>" style="max-width:200px">
                     <button type="submit"><i class="fa fa-search"></i></button>
-                    <input type="text" placeholder="Zoeken.." name="search2">
+                    <input type="text" placeholder="Zoeken.." name="search">
                 </form>
             </div>
         </div>
