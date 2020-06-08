@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Gegenereerd op: 04 jun 2020 om 12:50
+-- Gegenereerd op: 08 jun 2020 om 19:59
 -- Serverversie: 8.0.13-4
 -- PHP-versie: 7.2.24-0ubuntu0.18.04.6
 
@@ -21,6 +21,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `n3UZJG59Uc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `drukte`
+--
+
+CREATE TABLE `drukte` (
+  `winkel_id` int(11) NOT NULL,
+  `drukte` varchar(125) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `drukte`
+--
+
+INSERT INTO `drukte` (`winkel_id`, `drukte`) VALUES
+(1, 'Heel druk');
 
 -- --------------------------------------------------------
 
@@ -55,9 +73,17 @@ INSERT INTO `users` (`id`, `email`, `full_name`, `user_name`, `password`, `code`
 CREATE TABLE `winkels` (
   `id` int(11) NOT NULL,
   `winkelnaam` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `drukte` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `adres` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `plaats` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `eigenaar` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `winkels`
+--
+
+INSERT INTO `winkels` (`id`, `winkelnaam`, `adres`, `plaats`, `eigenaar`) VALUES
+(1, 'Dekamarkt', 'Drielse Wetering 48', 'Zaandam', '...');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -74,6 +100,7 @@ ALTER TABLE `users`
 -- Indexen voor tabel `winkels`
 --
 ALTER TABLE `winkels`
+  ADD UNIQUE KEY `adres` (`adres`) USING BTREE,
   ADD KEY `id` (`id`);
 
 --
@@ -84,13 +111,13 @@ ALTER TABLE `winkels`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT voor een tabel `winkels`
 --
 ALTER TABLE `winkels`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
