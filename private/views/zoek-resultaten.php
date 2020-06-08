@@ -64,7 +64,9 @@
                                 <p>Geen resultaten gevonden</p>
                             <?php else : ?>
                                 <?php foreach ($results as $resultaten) : ?>
-                                    <li><?php echo $resultaten['winkelnaam'] ?></li>
+                                    <li>
+                                        <?php echo $resultaten['winkelnaam'] . '<br>' . $resultaten['adres'].' '.$resultaten['plaats'].'<br>'.$resultaten['drukte'] ?>
+                                    </li>
                                 <?php endforeach ?>
                             <?php endif ?>
                         <?php endif ?>
