@@ -19,7 +19,7 @@ function getUserByCode($code){
 function searchStore($search){
      
     // $sql = "SELECT * FROM `winkels` WHERE `winkelnaam` LIKE :search";
-    $sql = "SELECT * FROM `winkels` RIGHT JOIN `drukte` ON `winkels`.`id` = `drukte`. `winkel_id` WHERE `winkelnaam` LIKE :search ORDER BY `plaats`";
+    $sql = "SELECT * FROM `winkels` RIGHT JOIN `drukte` ON `winkels`.`id` = `drukte`. `winkel_id` WHERE `winkelnaam` LIKE :search ORDER BY `winkelnaam`, `plaats`";
     $connection = dbConnect();
     $statement = $connection ->prepare( $sql );
     $params = [
