@@ -65,7 +65,12 @@
                             <?php else : ?>
                                 <?php foreach ($results as $resultaten) : ?>
                                     <li>
-                                        <?php echo $resultaten['winkelnaam'] . '<br>' . $resultaten['adres'].' '.$resultaten['plaats'].'<br>'.$resultaten['drukte'] ?>
+                                        <p>
+                                            <?php echo $resultaten['winkelnaam'] . '<br>'?>  
+                                            <?php echo $resultaten['adres'].' '?>
+                                            <?php echo $resultaten['plaats'].'<br>'?>
+                                            <span class="<?php echo $resultaten['drukte']?>"><?php echo $resultaten['drukte'] ?></span>
+                                        </p>
                                     </li>
                                 <?php endforeach ?>
                             <?php endif ?>
