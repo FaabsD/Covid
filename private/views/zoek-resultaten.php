@@ -69,7 +69,8 @@
                                             <?php echo $resultaten['winkelnaam'] . '<br>'?>  
                                             <?php echo $resultaten['adres'].' '?>
                                             <?php echo $resultaten['plaats'].'<br>'?>
-                                            <span class="<?php echo $resultaten['drukte']?>"><?php echo $resultaten['drukte'] ?></span>
+                                            <span class="<?php echo $resultaten['drukte']?>"><?php echo $resultaten['drukte']. '<br>' ?></span>
+                                            <a href="<?php echo url('drukte', ['id' => $resultaten['id']])?>">Drukte aangeven</a>
                                         </p>
                                     </li>
                                 <?php endforeach ?>
