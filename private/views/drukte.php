@@ -55,9 +55,9 @@
                     <p>Hier kun je aangeven hoe druk het is in de winkel.</p>
                 </div>
                 <div class="populair">
-                    <h3>Zoekresultaten</h3>
+                    <h3>Drukte bij: </h3>
                     <form action="" method="post">
-                        <legend>Test<?php foreach($winkel as $gegevens){echo $gegevens['winkelnaam'] . ' ' . $gegevens['adres'] . ' ' . $gegevens['plaats'];}?></legend>
+                        <legend><?php foreach($winkel as $gegevens){echo $gegevens['winkelnaam'] . ' ' . $gegevens['adres'] . ' ' . $gegevens['plaats'];}?></legend>
                         <select name="drukte" id="">
                             <option value="Niet druk">Niet druk</option>
                             <option value="Druk">Druk</option>
