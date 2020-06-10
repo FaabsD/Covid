@@ -15,7 +15,7 @@ function getUserByCode($code){
     }
     return false;
 }
-// haal resultaten van zoekopdrachtop uit database
+// haal resultaten van zoekopdracht op uit database
 function searchStore($search){
      
     // $sql = "SELECT * FROM `winkels` WHERE `winkelnaam` LIKE :search";
