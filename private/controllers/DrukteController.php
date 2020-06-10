@@ -11,15 +11,9 @@ use function DI\create;
     
     class DrukteController {
 
-        public function SetDrukte($id){
-            
-            echo $id;
-    
-            $connection = dbConnect();
-            $sql = "SELECT `winkelnaam` FROM `winkels` WHERE `id` = :id";
-            $statement = $connection->prepare($sql);
-            $statement->execute(['id' => $id]);
-            $winkel= $statement->fetchAll();
+        public function GetDrukte($id){
+            $winkel = getStore($id);
+           
             $template_engine = get_template_engine();
             
             echo $template_engine->render('drukte', ['winkel' =>$winkel]);

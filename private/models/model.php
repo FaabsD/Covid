@@ -29,3 +29,12 @@ function searchStore($search){
     
     return $statement->fetchAll();
 }
+
+//haal de winkel bij zijn id op voor de drukte aan te geven
+function getStore($id){
+    $connection = dbConnect();
+    $sql = "SELECT `winkelnaam`, `adres`, `plaats` FROM `winkels` WHERE `id` = :id";
+    $statement = $connection->prepare($sql);
+    $statement->execute(['id' => $id]);
+    return $statement->fetchAll();
+} 
