@@ -57,7 +57,7 @@
                 <div class="populair">
                     <h3>Zoekresultaten</h3>
                     <form action="" method="post">
-                        <legend>Test<?php print_r($winkel)?></legend>
+                        <legend>Test<?php foreach($winkel as $gegevens){echo $gegevens['winkelnaam'] . ' ' . $gegevens['adres'] . ' ' . $gegevens['plaats'];}?></legend>
                         <select name="drukte" id="">
                             <option value="Niet druk">Niet druk</option>
                             <option value="Druk">Druk</option>
