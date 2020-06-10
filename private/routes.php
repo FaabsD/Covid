@@ -24,7 +24,7 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	//Zoeken
 	SimpleRouter::post('/zoekresultaten', 'SearchController@SearchResults')->name('zoekresultaten');
 	//Drukte aangeven
-	SimpleRouter::get('/hoedruk/{id}', 'DrukteController@SetDrukte')->name('drukte');
+	SimpleRouter::get('/hoedruk/{id}', 'DrukteController@GetDrukte')->name('drukte');
 	// STOP: Tot hier al je eigen URL's zetten
 
 	SimpleRouter::get( '/not-found', function () {
