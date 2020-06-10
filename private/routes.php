@@ -23,6 +23,8 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	SimpleRouter::get( '/stuur-test-email', 'EmailController@sendTestEmail' )->name('email.test');
 	//Zoeken
 	SimpleRouter::post('/zoekresultaten', 'SearchController@SearchResults')->name('zoekresultaten');
+	//Drukte aangeven
+	SimpleRouter::get('/hoedruk/{id}', 'DrukteController@SetDrukte')->name('drukte');
 	// STOP: Tot hier al je eigen URL's zetten
 
 	SimpleRouter::get( '/not-found', function () {
