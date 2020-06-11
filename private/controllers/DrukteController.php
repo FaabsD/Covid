@@ -30,14 +30,4 @@ use function DI\create;
             
         }
 
-    	/* public function SearchResults(){
-            
-            $search = $_POST['search'];
-
-           $results = searchStore($search);
-            // print_r($results);
-
-            $template_engine = get_template_engine();
-            echo $template_engine->render('zoek-resultaten', ['results' => $results]);
-        }*/
     }
