@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Gegenereerd op: 08 jun 2020 om 19:59
+-- Gegenereerd op: 11 jun 2020 om 21:02
 -- Serverversie: 8.0.13-4
 -- PHP-versie: 7.2.24-0ubuntu0.18.04.6
 
@@ -38,7 +38,11 @@ CREATE TABLE `drukte` (
 --
 
 INSERT INTO `drukte` (`winkel_id`, `drukte`) VALUES
-(1, 'Heel druk');
+(1, 'Niet druk'),
+(2, 'Niet druk'),
+(3, 'Druk'),
+(4, 'Heel druk'),
+(5, 'Druk');
 
 -- --------------------------------------------------------
 
@@ -75,19 +79,29 @@ CREATE TABLE `winkels` (
   `winkelnaam` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `adres` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `plaats` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `eigenaar` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `eigenaar` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `winkels`
 --
 
 INSERT INTO `winkels` (`id`, `winkelnaam`, `adres`, `plaats`, `eigenaar`) VALUES
-(1, 'Dekamarkt', 'Drielse Wetering 48', 'Zaandam', '...');
+(5, 'Lidl', 'Dr. H. G. Scholtenstraat 5 ', 'Zaandam', NULL),
+(1, 'Dekamarkt', 'Drielse Wetering 48', 'Zaandam', '...'),
+(3, 'Dirk van den Broek', 'Marie Heinekenplein 25', 'Amsterdam', 'Detailresult'),
+(4, 'Coop', 'Niersstraat 16', 'Amsterdam', ''),
+(2, 'Albert Heijn', 'Van Dedemstraat 19', 'Hoorn', '');
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
+
+--
+-- Indexen voor tabel `drukte`
+--
+ALTER TABLE `drukte`
+  ADD UNIQUE KEY `winkel_id` (`winkel_id`);
 
 --
 -- Indexen voor tabel `users`
@@ -111,13 +125,13 @@ ALTER TABLE `winkels`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT voor een tabel `winkels`
 --
 ALTER TABLE `winkels`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
