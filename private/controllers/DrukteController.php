@@ -10,7 +10,7 @@ use function DI\create;
      */
     
     class DrukteController {
-
+        // haal de naam en id op van de winkel waarvan de drukte wordt aangepast
         public function GetDrukte($id){
             $winkel = getStore($id);
            
@@ -19,7 +19,7 @@ use function DI\create;
             echo $template_engine->render('drukte', ['winkel' =>$winkel]);
             
         }
-
+        // wijzig de drukte en stuur weer door naar de drukte pagina waar i.p.v. formulier een bevestiging wordt getoont
         public function handleDrukte(){
             $id = $_POST['id'];
             $drukte = $_POST['drukte'];
