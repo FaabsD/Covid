@@ -56,16 +56,29 @@
                 </div>
                 <div class="populair">
                     <h3>Drukte bij: </h3>
-                    <form action="<?php echo url('drukte.handle')?>" method="post">
-                        <legend><?php foreach($winkel as $gegevens){echo $gegevens['winkelnaam'] . ' ' . $gegevens['adres'] . ' ' . $gegevens['plaats'];}?></legend>
-                        <input type="hidden" name="id" value="<?php echo $gegevens['id']?>">
-                        <select name="drukte" id="">
-                            <option value="Niet druk">Niet druk</option>
-                            <option value="Druk">Druk</option>
-                            <option value="Heel druk">Heel druk</option>
-                        </select>
-                        <input type="submit" value="Wijzig">
-                    </form>
+                    <!-- geef een formulier mits doorvewezen vanaf resultaten pagina -->
+                    <?php if(isset ($winkel)): ?>
+                        <form action="<?php echo url('drukte.handle')?>" method="post">
+                            <legend><?php foreach($winkel as $gegevens){echo $gegevens['winkelnaam'] . ' ' . $gegevens['adres'] . ' ' . $gegevens['plaats'];}?></legend>
+                            <input type="hidden" name="id" value="<?php echo $gegevens['id']?>">
+                            <select name="drukte" id="">
+                                <option value="Niet druk">Niet druk</option>
+                                <option value="Druk">Druk</option>
+                                <option value="Heel druk">Heel druk</option>
+                            </select>
+                            <input type="submit" value="Wijzig">
+                        </form>
+                    <?php endif ?>
+                    <!-- geef een bevestiging als de drukte is aangepast -->
+                    <?php if (isset($bevestiging)): ?>
+                        <?php echo $bevestiging ?>
+                        <br><a href="<?php echo url('home')?>">Ga terug naar Homepage</a>
+                    <!-- niet doorverwezen geef een melding -->
+                    <?php else:?>
+                        <?php echo 'Er is geen winkel geselecteerd' ?>
+                    <?php endif ?>
+
+
                 </div>
 
             </section>
