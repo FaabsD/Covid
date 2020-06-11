@@ -26,6 +26,8 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	//Drukte aangeven
 	SimpleRouter::get('/hoedruk/{id}', 'DrukteController@GetDrukte')->name('drukte');
 	SimpleRouter::post('/hoedruk/verwerken', 'DrukteController@handleDrukte')->name('drukte.handle');
+	//(ontbrekende)Winkel toevoegen
+	SimpleRouter::get('/toevoegen','StoreController@storeForm')->name('add.winkel')
 
 	// STOP: Tot hier al je eigen URL's zetten
 
