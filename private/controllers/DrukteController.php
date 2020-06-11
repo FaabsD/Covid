@@ -20,6 +20,16 @@ use function DI\create;
             
         }
 
+        public function handleDrukte(){
+            $id = $_POST['id'];
+            $drukte = $_POST['drukte'];
+            changeDrukte($id, $drukte);
+
+            $template_engine = get_template_engine();
+            echo $template_engine->render('drukte',['bevestiging' => 'Drukte is Aangepast']);
+            
+        }
+
     	/* public function SearchResults(){
             
             $search = $_POST['search'];
@@ -31,4 +41,3 @@ use function DI\create;
             echo $template_engine->render('zoek-resultaten', ['results' => $results]);
         }*/
     }
-?>
