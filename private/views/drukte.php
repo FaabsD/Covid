@@ -56,13 +56,15 @@
                 </div>
                 <div class="populair">
                     <h3>Drukte bij: </h3>
-                    <form action="" method="post">
+                    <form action="<?php echo url('drukte.handle')?>" method="post">
                         <legend><?php foreach($winkel as $gegevens){echo $gegevens['winkelnaam'] . ' ' . $gegevens['adres'] . ' ' . $gegevens['plaats'];}?></legend>
+                        <input type="hidden" name="id" value="<?php echo $gegevens['id']?>">
                         <select name="drukte" id="">
                             <option value="Niet druk">Niet druk</option>
                             <option value="Druk">Druk</option>
                             <option value="Heel druk">Heel druk</option>
                         </select>
+                        <input type="submit" value="Wijzig">
                     </form>
                 </div>
 
