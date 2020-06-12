@@ -50,3 +50,32 @@ function changeDrukte($id, $drukte){
     ];
     $statement->execute($params);
 }
+
+// Voeg een nieuwe winkel toe aan de database en geeft daar
+function newStoreEntry($winkelnaam, $adres, $plaats, $drukte){
+    //maak verbinding met database
+    $connection = dbConnect();
+    // eerste query om uit te voeren
+    $sql1 = "INSERT INTO `winkels`(winkelnaam, adres, plaats)
+            VALUES (:winkelnaam, :adres, :plaats)";
+    // tweede query om uit te voeren
+    $sql2 = "INSERT INTO `drukte`(winkel_id, drukte)
+            VALUES (:id, :drukte)";
+    // bereidt de queries voor
+    $nieuwewinkel = $connection->prepare($sql1);
+    $druktewinkel = $connection->prepare($sql2);
+    // voer de queries uit doormiddel van een transaction
+    $connection->beginTransaction();
+    $nieuwewinkel->execute([
+        'winkelnaam' => $winkelnaam,
+        'adres' => $adres,
+        'plaats' => $plaats
+    ]);
+    // haal de laatste id op die via auto increment is toegevoegd en zet deze met drukte in de drukte tabel
+    $last_id = $connection->lastInsertId();
+    $druktewinkel->execute([
+        'id' => $last_id,
+        'drukte' => $drukte
+    ]);
+    $connection->commit();
+}
