@@ -55,8 +55,7 @@
                     <p>Staat uw winkel er niet tussen? Via het formulier kunt u deze zelf toevoegen.</p>
                 </div>
                 <div class="populair">
-                    <h3>Drukte bij: </h3>
-                    <form action="<?php echo url('handle.winkel') ?>" method="post">
+                    <form class="add" action="<?php echo url('handle.winkel') ?>" method="post">
                         <label for="winkelnaam">Winkel:</label>
                         <input type="text" name="winkelnaam" placeholder="bijv. Dekamarkt"><br>
                         <label for="adres">Adres:</label>
@@ -75,7 +74,6 @@
 
             </section>
             <section class="right">
-                <h1>hoi</h1>
             </section>
         </div>
 
