@@ -24,8 +24,11 @@ use function DI\create;
             $drukte = $_POST['drukte'];
            
             newStoreEntry($winkelnaam, $adres, $plaats, $drukte);
-            // TODO bovenstaande code in functie stoppen
-            // TODO Doorvewijzen naar een bevestiging
+            
+            // Doorvewijzen naar een bevestiging
+            $succes = "Winkel toegevoegd";
+            $template_engine = get_template_engine();
+            echo $template_engine->render('winkel-toevoegen', ['succes' => $succes]);
 
 
         }
