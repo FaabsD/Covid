@@ -19,7 +19,7 @@ use function DI\create;
         $result['errors']['email'] = 'deze gebruiker is nog niet geregistreerd';
        } else{
         $user = getUserByEmail( $result['data']['email'] );
-        if(password_verify($result['data']['wachtwoord'], $user['wachtwoord'])){
+        if(password_verify($result['data']['wachtwoord'], $user['password'])){
 
             $_SESSION['user_id'] =$user['id'];
 
