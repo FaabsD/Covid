@@ -26,16 +26,12 @@
                     </div>
                 </li>
                 <li>
-                    <div class="content">
-                        <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="favorieten">
-                        Favorieten
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <img src="<?php echo site_url( '/images/verified.png' ) ?>" alt="overons">
-                        Over Ons
-                    </div>
+                    <a href="/Covid/public/registreren">
+                        <div class="content">
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Registreren">
+                            Registreren
+                        </div>
+                    </a>
                 </li>
             </ul>
         </nav>

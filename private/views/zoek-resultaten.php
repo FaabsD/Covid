@@ -23,21 +23,17 @@ $config = get_config('BASE_URL');
         <nav>
             <ul>
                 <li>
-                    <div class="content-active">
-                        <img src="<?php echo site_url('/images/home.png') ?>" alt="home">
-                        Home
-                    </div>
+                    <a href="/Covid/public/home">
+                        <div class="content-active">
+                            <img src="<?php echo site_url('/images/home.png') ?>" alt="home">
+                            Home
+                        </div>
+                    </a>
                 </li>
                 <li>
                     <div class="content">
-                        <img src="<?php echo site_url('/images/fire.png') ?>" alt="favorieten">
-                        Favorieten
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <img src="<?php echo site_url('/images/verified.png') ?>" alt="overons">
-                        Over Ons
+                        <img src="<?php echo site_url('/images/fire.png') ?>" alt="Registreren">
+                        Registreren
                     </div>
                 </li>
             </ul>

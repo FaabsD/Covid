@@ -12,6 +12,10 @@ body {
     overflow-y: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 .sidebar {
     height: 100vh;
     max-width: 25vh;
