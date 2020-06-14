@@ -36,6 +36,7 @@ $config = get_config('BASE_URL');
                             <img src="<?php echo site_url('/images/fire.png') ?>" alt="Registreren">
                             Registreren
                         </div>
+                    </a>
                 </li>
             </ul>
         </nav>
