@@ -17,7 +17,7 @@ function getUserByEmail($email){
     $statement->execute( [ 'email' => $email ] );
 
     if($statement->rowCount() === 1 ){
-        return $statement-fetch();
+        return $statement->fetch();
     }
  return false;
 }
