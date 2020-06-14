@@ -77,7 +77,7 @@ function validateRegistrationData($data)
 
 	// Checks: valideren of email echt een geldig email is
 	$email      = filter_var($data['email'], FILTER_VALIDATE_EMAIL);
-	$wachtwoord = trim($data['wachtwoord']);
+	$wachtwoord = trim($data['password']);
 
 	if ($email === false) {
 		$errors['email'] = 'Geen geldig email ingevuld';
@@ -85,13 +85,13 @@ function validateRegistrationData($data)
 
 	// Checks: wachtwoord minimaal 6 tekens bevat
 	if (strlen($wachtwoord) < 6) {
-		$errors['wachtwoord'] = 'Geen geldig wachtwoord (minimaal 6 tekens)';
+		$errors['password'] = 'Geen geldig password (minimaal 6 tekens)';
 	}
 
 	// Resultaat array
 	$data = [
 		'email' => $data['email'],
-		'wachtwoord' => $wachtwoord
+		'password' => $wachtwoord
 	];
 
 	return [
