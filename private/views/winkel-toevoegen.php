@@ -55,25 +55,27 @@
                     <p>Staat uw winkel er niet tussen? Via het formulier kunt u deze zelf toevoegen.</p>
                 </div>
                 <div class="populair">
-                    <?php if (isset($succes)) : ?>
-                        <h3><?php echo $succes ?></h3>
-                        <a href="<?php echo url('home')?>">Terug naar Homepage</a>
-                    <?php else : ?>
-                        <form class="add" action="<?php echo url('handle.winkel') ?>" method="post">
-                            <label for="winkelnaam">Winkel:</label>
-                            <input type="text" name="winkelnaam" placeholder="bijv. Dekamarkt"><br>
-                            <label for="adres">Adres:</label>
-                            <input type="text" name="adres" placeholder="bijv. Drielse Wetering 48"><br>
-                            <label for="plaats">Plaats:</label>
-                            <input type="text" name="plaats" placeholder="bijv. Zaandam"><br>
-                            <label for="drukte">Drukte</label>
-                            <select name="drukte">
-                                <option value="Niet druk">Niet druk</option>
-                                <option value="Druk">Druk</option>
-                                <option value="Heel druk">Heel druk</option>
-                            </select><br>
-                            <input type="submit" value="Voeg toe">
-                        </form>
+                    <?php if (!isset($_SESSION['user_id'])):?>
+                        <h3><?php echo 'Je bent niet ingelogd'?></h3>
+                        <?php elseif (isset($succes)) : ?>
+                            <h3><?php echo $succes ?></h3>
+                            <a href="<?php echo url('home')?>">Terug naar Homepage</a>
+                        <?php else : ?>
+                            <form class="add" action="<?php echo url('handle.winkel') ?>" method="post">
+                                <label for="winkelnaam">Winkel:</label>
+                                <input type="text" name="winkelnaam" placeholder="bijv. Dekamarkt"><br>
+                                <label for="adres">Adres:</label>
+                                <input type="text" name="adres" placeholder="bijv. Drielse Wetering 48"><br>
+                                <label for="plaats">Plaats:</label>
+                                <input type="text" name="plaats" placeholder="bijv. Zaandam"><br>
+                                <label for="drukte">Drukte</label>
+                                <select name="drukte">
+                                    <option value="Niet druk">Niet druk</option>
+                                    <option value="Druk">Druk</option>
+                                    <option value="Heel druk">Heel druk</option>
+                                </select><br>
+                                <input type="submit" value="Voeg toe">
+                            </form>
                     <?php endif ?>
 
                 </div>
