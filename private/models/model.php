@@ -12,7 +12,7 @@ function getUsers(){
 
 function getUserByEmail($email){
     $connection = dbConnect();
-    $sql        = "SELECT * FROM `gebruikers` WHERE email = :email";
+    $sql        = "SELECT * FROM `users` WHERE email = :email";
     $statement  = $connection->prepare( $sql );
     $statement->execute( [ 'email' => $email ] );
 
