@@ -20,6 +20,11 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	SimpleRouter::get('/registreren/bevestig-account/{code}', 'RegistrationController@confirmRegistration')->name( 'register.confirm' );
 	SimpleRouter::get('/registreren/account-bevestigd', 'RegistrationController@registrationConfirmed')->name('register.confirmed');
 	
+	// LOGIN ROUTES
+	SimpleRouter::get('/login', 'LoginController@loginForm')->name('login.form');
+	SimpleRouter::post('/login/verwerk', 'LoginController@handleloginForm')->name('login.handle');
+	SimpleRouter::post('/ingelogd/dashboard', 'LoginController@userDashboard')->name('user.dashboard');
+	
 	SimpleRouter::get( '/stuur-test-email', 'EmailController@sendTestEmail' )->name('email.test');
 	//Zoeken
 	SimpleRouter::post('/zoekresultaten', 'SearchController@SearchResults')->name('zoekresultaten');
