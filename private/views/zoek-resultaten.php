@@ -23,18 +23,19 @@ $config = get_config('BASE_URL');
         <nav>
             <ul>
                 <li>
-                    <a href="<?php echo url('register') ?>">
-                        <div class="content-active">
-                            <img src="<?php echo site_url('/images/home.png') ?>" alt="home">
-                            Home
-                        </div>
+
+                    <div class="content-active">
+                        <img src="<?php echo site_url('/images/home.png') ?>" alt="home">
+                        Home
+                    </div>
                     </a>
                 </li>
                 <li>
-                    <div class="content">
-                        <img src="<?php echo site_url('/images/fire.png') ?>" alt="Registreren">
-                        Registreren
-                    </div>
+                    <a href="<?php echo url('register') ?>">
+                        <div class="content">
+                            <img src="<?php echo site_url('/images/fire.png') ?>" alt="Registreren">
+                            Registreren
+                        </div>
                 </li>
             </ul>
         </nav>
