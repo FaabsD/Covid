@@ -23,7 +23,7 @@ $config = get_config('BASE_URL');
         <nav>
             <ul>
                 <li>
-                    <a href="/Covid/public/home">
+                    <a href="<?php echo url('register') ?>">
                         <div class="content-active">
                             <img src="<?php echo site_url('/images/home.png') ?>" alt="home">
                             Home
@@ -59,18 +59,18 @@ $config = get_config('BASE_URL');
                 <div class="populair">
                     <h3>Zoekresultaten</h3>
                     <ol>
-                        <?php if ( isset($results) ) : ?>
-                            <?php if ( count($results) ===0 ) : ?>
+                        <?php if (isset($results)) : ?>
+                            <?php if (count($results) === 0) : ?>
                                 <p>Geen resultaten gevonden</p>
                             <?php else : ?>
                                 <?php foreach ($results as $resultaten) : ?>
                                     <li>
                                         <p>
-                                            <?php echo $resultaten['winkelnaam'] . '<br>'?>  
-                                            <?php echo $resultaten['adres'].' '?>
-                                            <?php echo $resultaten['plaats'].'<br>'?>
-                                            <span class="<?php echo $resultaten['drukte']?>"><?php echo $resultaten['drukte']. '<br>' ?></span>
-                                            <a href="<?php echo url('drukte', ['id' => $resultaten['id']])?>">Drukte aangeven</a>
+                                            <?php echo $resultaten['winkelnaam'] . '<br>' ?>
+                                            <?php echo $resultaten['adres'] . ' ' ?>
+                                            <?php echo $resultaten['plaats'] . '<br>' ?>
+                                            <span class="<?php echo $resultaten['drukte'] ?>"><?php echo $resultaten['drukte'] . '<br>' ?></span>
+                                            <a href="<?php echo url('drukte', ['id' => $resultaten['id']]) ?>">Drukte aangeven</a>
                                         </p>
                                     </li>
                                 <?php endforeach ?>

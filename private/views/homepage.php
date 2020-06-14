@@ -26,7 +26,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="/Covid/public/registreren">
+                    <a href="<?php echo url('register')?>">
                         <div class="content">
                             <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Registreren">
                             Registreren
