@@ -49,7 +49,7 @@
                 </form>
             </div>
         </div>
-        <div class="content">
+        <div class="main-content">
             <section class="left">
                 <div class="intro">
                     <h1>Welkom op Druktezoeker!</h1>
@@ -70,7 +70,6 @@
 
             </section>
             <section class="right">
-                <h1>hoi</h1>
             </section>
         </div>
 

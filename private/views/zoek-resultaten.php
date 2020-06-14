@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<?php
+$config = get_config('BASE_URL');
+?>
+
 <body>
     <div class="sidebar">
         <div class="logo">
@@ -81,7 +85,6 @@
 
             </section>
             <section class="right">
-                <h1>hoi</h1>
             </section>
         </div>
 

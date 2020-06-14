@@ -8,6 +8,8 @@
 
 body {
     display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .sidebar {
@@ -46,6 +48,7 @@ nav li img {
     display: flex;
     padding: 15px 20px;
     border-radius: 100px;
+    cursor: pointer;
 }
 
 .content-active {
@@ -54,6 +57,7 @@ nav li img {
     padding: 15px 20px;
     border-radius: 100px;
     color: white;
+    cursor: pointer;
 }
 
 main {
@@ -105,8 +109,10 @@ form.search::after {
     outline: none;
 }
 
-.content {
+.main-content {
     display: flex;
+    padding: 15px 0px 15px 20px;
+    border-radius: 100px;
 }
 
 section.left {
@@ -115,7 +121,6 @@ section.left {
 
 section.right {
     flex: 1;
-    margin-left: 5vw;
 }
 
 .intro h1 {
@@ -146,4 +151,17 @@ form.add input[type=submit] {
     border: none;
     border-radius: 100px;
     cursor: pointer;
+}
+
+.populair {
+    margin-top: 4vh;
+    padding: 2em;
+    border-radius: 50px;
+    background-color: #E2EFFF;
+    width: 50%;
+}
+
+.populair ol{
+    padding-top: 1vh;
+    padding-left: 2vw;
 }
