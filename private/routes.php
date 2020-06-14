@@ -24,7 +24,7 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	// LOGIN ROUTES
 	SimpleRouter::get('/login', 'LoginController@loginForm')->name('login.form');
 	SimpleRouter::post('/login/verwerk', 'LoginController@handleloginForm')->name('login.handle');
-	SimpleRouter::post('/ingelogd/dashboard', 'LoginController@userDashboard')->name('user.dashboard');
+	SimpleRouter::get('/ingelogd/dashboard', 'LoginController@userDashboard')->name('user.dashboard');
 	
 	SimpleRouter::get( '/stuur-test-email', 'EmailController@sendTestEmail' )->name('email.test');
 	//Zoeken
