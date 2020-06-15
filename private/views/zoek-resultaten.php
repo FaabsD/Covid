@@ -23,10 +23,12 @@ $config = get_config('BASE_URL');
         <nav>
             <ul>
                 <li>
-                    <div class="content-active">
-                        <img src="<?php echo site_url( '/images/home.png' ) ?>" alt="home">
-                        Home
-                    </div>
+                    <a href="<?php echo url('home')?>">
+                        <div class="content-active">
+                            <img src="<?php echo site_url( '/images/home.png' ) ?>" alt="home">
+                            Home
+                        </div>
+                    </a>
                 </li>
                 <li>
                     <a href="<?php echo url('register')?>">
