@@ -5,7 +5,7 @@
 use function DI\create;
 
 
-    class loginController {
+    class LoginController {
     	public function loginForm() {
 
 		$template_engine = get_template_engine();
