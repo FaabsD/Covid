@@ -20,21 +20,35 @@
             <ul>
                 <li>
                     <div class="content-active">
-                        <img src="<?php echo site_url('/images/home.png') ?>" alt="home">
+                        <img src="<?php echo site_url( '/images/home.png' ) ?>" alt="home">
                         Home
                     </div>
+                </li>
+                <li>
+                    <a href="<?php echo url('register')?>">
+                        <div class="content">
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Registreren">
+                            Registreren
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo url('register') ?>">
-                    <div class="content">
-                        <img src="<?php echo site_url('/images/fire.png') ?>" alt="Registreren">
-                            Registreren
-                    </div>
+                    <a href="<?php echo url('login.form')?>">
+                        <div class="content">
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Inloggen">
+                            Inloggen
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url('add.winkel')?>">
+                        <div class="content">
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Toevoegen">
+                            Toevoegen
+                        </div>
                     </a>
                 </li>
             </ul>
-        </nav>
     </div>
     <main>
         <div class="header">

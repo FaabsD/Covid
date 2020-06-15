@@ -33,6 +33,22 @@
                         </div>
                     </a>
                 </li>
+                <li>
+                    <a href="<?php echo url('login.form')?>">
+                        <div class="content">
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Inloggen">
+                            Inloggen
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url('add.winkel')?>">
+                        <div class="content">
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Toevoegen">
+                            Toevoegen
+                        </div>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

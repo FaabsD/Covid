@@ -23,18 +23,32 @@ $config = get_config('BASE_URL');
         <nav>
             <ul>
                 <li>
-
                     <div class="content-active">
-                        <img src="<?php echo site_url('/images/home.png') ?>" alt="home">
+                        <img src="<?php echo site_url( '/images/home.png' ) ?>" alt="home">
                         Home
                     </div>
+                </li>
+                <li>
+                    <a href="<?php echo url('register')?>">
+                        <div class="content">
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Registreren">
+                            Registreren
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo url('register') ?>">
+                    <a href="<?php echo url('login.form')?>">
                         <div class="content">
-                            <img src="<?php echo site_url('/images/fire.png') ?>" alt="Registreren">
-                            Registreren
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Inloggen">
+                            Inloggen
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url('add.winkel')?>">
+                        <div class="content">
+                            <img src="<?php echo site_url( '/images/fire.png' ) ?>" alt="Toevoegen">
+                            Toevoegen
                         </div>
                     </a>
                 </li>
